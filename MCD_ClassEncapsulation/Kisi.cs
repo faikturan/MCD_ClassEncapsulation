@@ -39,6 +39,29 @@ namespace MCD_ClassEncapsulation
             }
         }
 
+        private int _yas;
+        public int Yas
+        {
+            get
+            {
+                return _yas;
+            }
+            //kapsülleme aracılığıyla kontrol edelim. Kurala uymayan bir durum varsa
+            //throw ile hata fırlatabiliriz.
+            set
+            {
+                _yas = value;
+                if (_yas < 0)
+                {
+                    _yas = 0;
+                    throw new FormatException("Yaş özelliği sıfırdan küçük olamaz");
+                }
+
+            }
+        }
+
+        public DateTime DogumTarihi { get; set; }
+
 
     }
 }
