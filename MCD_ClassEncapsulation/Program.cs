@@ -10,6 +10,30 @@ namespace MCD_ClassEncapsulation
     {
         static void Main(string[] args)
         {
+            try
+            {
+                Kisi ft = new Kisi();
+
+                ft.Adi = "faik";
+                ft.DenemeTelNo = "02455222022effffd7792522++++";
+                ft.DogumTarihi = new DateTime(1978, 07, 20);
+                ft.Soyadi = "turan";
+                ft.Yas = 43;
+                ft.TelefonNumarasi = "1234567896789965";
+
+                Console.WriteLine(ft.Adi);
+                Console.WriteLine(ft.Soyadi);
+                Console.WriteLine(ft.DogumTarihi);
+                Console.WriteLine(ft.DenemeTelNo);
+                Console.WriteLine(ft.TelefonNumarasi);
+                Console.WriteLine(ft.Yas);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("HATA oluştu.");
+                Console.WriteLine(ex.Message);
+            }
+            Console.ReadKey();
         }
     }
 }

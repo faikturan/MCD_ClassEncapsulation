@@ -105,6 +105,8 @@ namespace MCD_ClassEncapsulation
             }
         }
 
+        public string DenemeTelNo { get; set; }
+
 
     }
 }
